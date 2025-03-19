@@ -8,21 +8,21 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col sm:flex-row">
+    <div className="relative min-h-screen flex flex-col sm:flex-row ">
       {/* Left Side Container */}
       <div className="flex-1 flex flex-col items-center">
 
         {/* Navbar */}
-        <div className="bg-[#3066BE] h-auto sm:h-16 sm:w-[1290px] flex flex-wrap items-center px-4 sm:px-10 justify-between py-2">
-  <span className="text-white text-lg sm:text-2xl font-semibold">Stemsy</span>
+        <div className="bg-[#3066BE] h-auto sm:h-16  sm:w-[1290px] flex items-center px-4 sm:px-10 justify-between py-2">
+  <span className="text-white  relative left-2 text-lg sm:text-2xl font-semibold">Stemsy</span>
 
-  <div className="flex flex-wrap sm:flex-nowrap items-center gap-2 sm:gap-4 min-w-0 mt-2 sm:mt-0">
-    <button className="bg-white rounded-sm px-4 py-1 text-sm sm:text-base whitespace-nowrap">Explore</button>
+  <div className="flex relative left-6 sm:flex-nowrap items-center gap-1  sm:gap-4 min-w-0 mt-2 sm:mt-0">
+    <button className="bg-white rounded-sm px-2 sm:px-4 py-1 text-sm sm:text-base whitespace-nowrap">Explore</button>
 
     <input
       type="search"
       placeholder="Search..."
-      className="bg-white rounded-sm py-1 px-3 w-40 sm:w-64 text-sm sm:text-base min-w-0"
+      className="bg-white rounded-sm py-1 px-1 w-10 sm:w-64 text-sm sm:text-base min-w-0"
     />
 
     <button className="p-2 text-white shadow-sm rounded-full hover:text-[#3066BE] hover:bg-white text-lg sm:text-xl">
@@ -30,20 +30,20 @@ function Home() {
     </button>
   </div>
 
-  <div className="flex flex-wrap items-end place-items-end gap-2 sm:gap-4 min-w-0 mt-2 sm:mt-0">
+  <div className="flex relative left-4 items-end  place-items-end gap-1 sm:gap-4 min-w-0 mt-2 sm:mt-0">
     <Link to="/login">
-      <button className="rounded-sm text-white hover:bg-white hover:text-[#3066BE] px-3 py-1 shadow-sm text-sm sm:text-base whitespace-nowrap">
+      <button className="rounded-sm text-white hover:bg-white hover:text-[#3066BE] px-1 py-1 shadow-sm text-sm sm:text-base whitespace-nowrap">
         Sign In
       </button>
     </Link>
 
     <Link to="/signup">
-      <button className="rounded-sm text-white hover:bg-white hover:text-[#3066BE] px-3 py-1 shadow-sm text-sm sm:text-base whitespace-nowrap">
+      <button className="rounded-sm text-white hover:bg-white hover:text-[#3066BE] px-1 py-1 shadow-sm text-sm sm:text-base whitespace-nowrap">
         Sign Up
       </button>
     </Link>
 
-    <select className="text-white shadow-sm px-2 py-1 bg-transparent border border-white rounded-sm text-sm sm:text-base">
+    <select className="text-white shadow-sm px-2 py-1 bg-transparent border border-white rounded-sm text-xs sm:text-base">
       <option>English</option>
     </select>
   </div>

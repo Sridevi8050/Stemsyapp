@@ -21,9 +21,9 @@ function Home1() {
 
         {/* Navbar */}
       
-          <div className="bg-[#3066BE] min-h-24 sm:min-w-[1275px] sm:h-20 flex items-center justify-between px-4 sm:px-8 flex-wrap relative">
+          <div className="bg-[#3066BE] min-h-24 sm:min-w-[1275px] sm:h-20 flex items-center justify-between px-4 sm:px-8  relative">
                 {/* Left - Menu and Stemsy */}
-                <div className="flex items-center space-x-3 flex-shrink-0">
+                <div className="flex relative right-3 items-center space-x-2 flex-shrink-0">
                   <button onClick={() => setMenuOpen(!menuOpen)}>
                     <HiBars3 className="text-white text-2xl sm:text-3xl" />
                   </button>
@@ -31,20 +31,20 @@ function Home1() {
                 </div>
           
                 {/* Center - Explore, Search, Audio */}
-                <div className="flex items-center space-x-2 sm:space-x-4 flex-grow justify-center min-w-0 mt-4 sm:mt-0">
+                <div className="flex items-center space-x-2 sm:space-x-4 flex-grow justify-center min-w-0 mt-2 sm:mt-0">
                   <button className="bg-white text-sm sm:text-base rounded px-3 py-1 flex-shrink-0">Explore</button>
                   <input
-                    type="search"
-                    placeholder="Search..."
-                    className="bg-white rounded py-1 px-2 w-28 sm:w-14  text-sm sm:text-base flex-grow"
-                  />
+                 type="search"
+               placeholder="Search..."
+                className="bg-white rounded-sm py-1 px-1 w-10 sm:w-64 text-sm sm:text-base min-w-0"
+               />
                   <button className="p-2 text-white rounded-full hover:text-[#3066BE] hover:bg-white flex-shrink-0">
                     <AiFillAudio size={20} />
                   </button>
                 </div>
           
                 {/* Right - Language and Profile Image */}
-                <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0 mt-4 sm:mt-0 ml-auto">
+                <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0 mt-2 sm:mt-0 ml-auto">
                   <select className="text-white bg-transparent hover:bg-white hover:text-[#3066BE] p-1 rounded text-sm sm:text-base">
                     <option>English</option>
                   </select>
@@ -110,7 +110,7 @@ function Home1() {
               </div>
 
         {/* Hero Section */}
-        <div className="w-full max-w-[880px] mt-6 bg-[#e3b552] px-4   sm:px-10 py-4 sm:py-6 rounded-sm shadow-lg text-center  sm:text-left  sm:relative right-30">
+        <div className="w-full max-w-[880px] sm:mt-6 bg-[#e3b552] px-4 sm:px-10 py-4 sm:py-6 rounded-sm shadow-lg text-center  sm:text-left  sm:relative right-30">
           <h1 className="text-base sm:text-2xl font-bold">STEM Initiative For Rural Kids</h1>
           <p className="text-gray-800 text-sm sm:text-base">
             "Empowering young minds with STEM education to innovate and shape the future."
