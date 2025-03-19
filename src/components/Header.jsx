@@ -20,16 +20,16 @@ function Header() {
 
       {/* Center - Explore, Search, Audio */}
       <div className="flex items-center space-x-2 sm:space-x-4 flex-grow justify-center min-w-0 mt-2 sm:mt-0">
-        <button className="bg-white text-sm sm:text-base rounded px-3 py-1 flex-shrink-0">Explore</button>
-        <input
-                 type="search"
-               placeholder="Search..."
-                className="bg-white rounded-sm py-1 px-1 w-10 sm:w-64 text-sm sm:text-base min-w-0"
-               />
-        <button className="p-2 text-white rounded-full hover:text-[#3066BE] hover:bg-white flex-shrink-0">
-          <AiFillAudio size={20} />
-        </button>
-      </div>
+                        <button className="bg-white text-xs sm:text-base rounded px-1 sm:px-4 py-1 flex-shrink-0">Explore</button>
+                        <input
+                       type="search"
+                     placeholder="Search..."
+                      className="bg-white rounded-sm py-1 px-1 w-10 sm:w-64 text-sm sm:text-base min-w-0"
+                     />
+                        <button className=" text-white rounded-full hover:text-[#3066BE] hover:bg-white flex-shrink-0">
+                          <AiFillAudio size={20} />
+                        </button>
+                      </div>
 
       {/* Right - Language and Profile Image */}
       <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0 mt-2 sm:mt-0 ml-auto">
@@ -40,11 +40,11 @@ function Header() {
         {/* Profile image - responsive */}
         <div className="relative">
           <button
-            className="bg-white w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden flex-shrink-0"
+            className="bg-white w-5 h-5 sm:w-12 sm:h-12 rounded-full overflow-hidden flex-shrink-0"
             onClick={() => setDropdownOpen(!dropdownOpen)}
           >
             <img
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
               src="https://s3-alpha-sig.figma.com/img/027c/5c82/5bf85922c6965220c96ac141f0374b7b?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=X~jMNLPhTwEg23x12kPm3saAQ4znk3a1eLxlm62ToKbti~VXPDzKAK9H1IaOFljnhYufRQkSqVYxePrce5C6yVG~NjVOofq95utIOVECxELEMyyZVSrpjfkjXR8wil7cdNlrR6L7nZtjOW~cKpfd8XE6wA7tQrU0dY2wgRH8GfCP6LeFEUUwfFkxGdmiNA6PJemjKC77rRNC-deHkltKHRPMTDqecYH0ntWC4xiZzpxjRB8k6k5jYgYGTMJc9DsD3iTrYVuslU1qFcIMWLCWx2H7D-KvcmPxGCQBM22uunkqjm-E3yQTbjP0H2EwMDadBpsoDG-gD2Z2ne7IM8CJVw__"
               alt="User"
             />
@@ -79,12 +79,16 @@ function Header() {
               { name: "Help", path: "/help" },
               { name: "Setting", path: "/settings" },
             ].map((item) => (
-              <li
-                key={item.name}
-                className="p-2 text-black hover:bg-[#3066BE] rounded-md cursor-pointer hover:text-white"
-              >
-                <Link className="w-full" to={item.path}>{item.name}</Link>
-              </li>
+              // <li
+              //   key={item.name}
+              //   className="p-2 text-black hover:bg-[#3066BE] rounded-md cursor-pointer hover:text-white"
+              // >
+              //   <Link className="w-full" to={item.path}>{item.name}</Link>
+              // </li>
+              <Link key={item.name} to={item.path} className="block p-2 text-black hover:bg-[#3066BE] rounded-md cursor-pointer hover:text-white">
+                {item.name}
+              </Link>
+
             ))}
           </ul>
           <hr />

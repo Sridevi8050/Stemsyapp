@@ -8,6 +8,7 @@ import { HiBars3 } from "react-icons/hi2";
 import { TbMessageChatbot } from "react-icons/tb";
 
 import { Link } from "react-router-dom";
+// import Header from "../Header";
 
 function Home1() {
    const [menuOpen, setMenuOpen] = useState(false);
@@ -15,44 +16,42 @@ function Home1() {
   return (
 
 <div className="relative min-h-screen flex flex-col sm:flex-row">
-      {/* Left Side Container */}
+      
       
       <div className="flex-1 flex flex-col items-center  ">
 
-        {/* Navbar */}
-      
-          <div className="bg-[#3066BE] min-h-24 sm:min-w-[1275px] sm:h-20 flex items-center justify-between px-4 sm:px-8  relative">
-                {/* Left - Menu and Stemsy */}
-                <div className="flex relative right-3 items-center space-x-2 flex-shrink-0">
+      {/* <Header/> */}
+          <div className="bg-[#3066BE] min-h-24 w-full sm:min-w-[1275px] sm:h-20 flex items-center justify-between px-4 sm:px-8  relative">
+               
+                <div className="flex relative right-3 items-start space-x-1 flex-shrink-0">
                   <button onClick={() => setMenuOpen(!menuOpen)}>
                     <HiBars3 className="text-white text-2xl sm:text-3xl" />
                   </button>
                   <span className="text-white text-xl sm:text-2xl font-semibold">Stemsy</span>
                 </div>
           
-                {/* Center - Explore, Search, Audio */}
+               
                 <div className="flex items-center space-x-2 sm:space-x-4 flex-grow justify-center min-w-0 mt-2 sm:mt-0">
-                  <button className="bg-white text-sm sm:text-base rounded px-3 py-1 flex-shrink-0">Explore</button>
+                  <button className="bg-white text-xs sm:text-base rounded px-1 sm:px-4 py-1 flex-shrink-0">Explore</button>
                   <input
                  type="search"
                placeholder="Search..."
                 className="bg-white rounded-sm py-1 px-1 w-10 sm:w-64 text-sm sm:text-base min-w-0"
                />
-                  <button className="p-2 text-white rounded-full hover:text-[#3066BE] hover:bg-white flex-shrink-0">
+                  <button className=" text-white rounded-full hover:text-[#3066BE] hover:bg-white flex-shrink-0">
                     <AiFillAudio size={20} />
                   </button>
                 </div>
           
-                {/* Right - Language and Profile Image */}
                 <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0 mt-2 sm:mt-0 ml-auto">
                   <select className="text-white bg-transparent hover:bg-white hover:text-[#3066BE] p-1 rounded text-sm sm:text-base">
                     <option>English</option>
                   </select>
           
-                  {/* Profile image - responsive */}
+                  
                   <div className="relative">
                     <button
-                      className="bg-white w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden flex-shrink-0"
+                      className="bg-white w-7 h-7 sm:w-12 sm:h-12 rounded-full overflow-hidden flex-shrink-0"
                       onClick={() => setDropdownOpen(!dropdownOpen)}
                     >
                       <img
@@ -77,7 +76,7 @@ function Home1() {
                   </div>
                 </div>
           
-                {/* Mobile Dropdown */}
+              
                 {menuOpen && (
                   <div className="absolute top-full left-4 bg-white shadow-md rounded-md w-56 p-2 z-50 mt-2">
                     <ul className="space-y-2">
@@ -91,12 +90,16 @@ function Home1() {
                         { name: "Help", path: "/help" },
                         { name: "Setting", path: "/settings" },
                       ].map((item) => (
-                        <li
-                          key={item.name}
-                          className="p-2 text-black hover:bg-[#3066BE] rounded-md cursor-pointer hover:text-white"
-                        >
-                          <Link className="w-full" to={item.path}>{item.name}</Link>
-                        </li>
+                        // <li
+                        //   key={item.name}
+                        //   className="p-2 text-black hover:bg-[#3066BE] rounded-md cursor-pointer block hover:text-white"
+                        // >
+                        //   <Link className="w-full" to={item.path}>{item.name}</Link>
+                        // </li>
+                        <Link key={item.name} to={item.path} className="block p-2 text-black hover:bg-[#3066BE] rounded-md cursor-pointer hover:text-white">
+  {item.name}
+</Link>
+
                       ))}
                     </ul>
                     <hr />
