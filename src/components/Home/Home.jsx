@@ -8,13 +8,13 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col sm:flex-row ">
+    <div className="relative min-h-screen w-full flex flex-col sm:flex-row ">
       {/* Left Side Container */}
-      <div className="flex-1 flex flex-col items-center">
+      <div className="flex-1 flex flex-col items-center w-full ">
 
         {/* Navbar */}
-        <div className="bg-[#3066BE] h-auto sm:h-16  sm:w-[1290px] flex items-center px-4 sm:px-10 justify-between py-2">
-  <span className="text-white  relative left-2 text-lg sm:text-2xl font-semibold">Stemsy</span>
+        <div className="bg-[#3066BE] h-auto sm:h-16 sm:w-[1290px] flex items-center px-4 sm:px-10 justify-between py-2">
+  <span className="text-white  relative left-4 text-lg sm:text-2xl font-semibold">Stemsy</span>
 
   <div className="flex relative left-6 sm:flex-nowrap items-center gap-1  sm:gap-4 min-w-0 mt-2 sm:mt-0">
     <button className="bg-white rounded-sm px-2 sm:px-4 py-1 text-sm sm:text-base whitespace-nowrap">Explore</button>
@@ -25,12 +25,12 @@ function Home() {
       className="bg-white rounded-sm py-1 px-1 w-10 sm:w-64 text-sm sm:text-base min-w-0"
     />
 
-    <button className="p-2 text-white shadow-sm rounded-full hover:text-[#3066BE] hover:bg-white text-lg sm:text-xl">
+    <button className="p-1 text-white shadow-sm rounded-full hover:text-[#3066BE] hover:bg-white text-lg sm:text-xl">
       <AiFillAudio />
     </button>
   </div>
 
-  <div className="flex relative left-4 items-end  place-items-end gap-1 sm:gap-4 min-w-0 mt-2 sm:mt-0">
+  <div className="flex relative left-5 items-end  place-items-end gap-1 sm:gap-4 min-w-0 mt-2 sm:mt-0">
     <Link to="/login">
       <button className="rounded-sm text-white hover:bg-white hover:text-[#3066BE] px-1 py-1 shadow-sm text-sm sm:text-base whitespace-nowrap">
         Sign In
@@ -43,7 +43,7 @@ function Home() {
       </button>
     </Link>
 
-    <select className="text-white shadow-sm px-2 py-1 bg-transparent border border-white rounded-sm text-xs sm:text-base">
+    <select className="text-white shadow-sm px-1 py-1 bg-transparent border border-white rounded-sm text-xs sm:text-base">
       <option>English</option>
     </select>
   </div>
@@ -51,7 +51,7 @@ function Home() {
 
 
         {/* Hero Section */}
-        <div className="w-full max-w-[880px] mt-6 bg-[#e3b552] px-4 sm:relative right-30  sm:px-10 py-4 sm:py-6 rounded-sm shadow-lg text-center sm:text-left">
+        <div className="w-full max-w-[880px] sm:mt-6 bg-[#e3b552] px-4 sm:px-10 py-4 sm:py-6 rounded-sm shadow-lg text-center  sm:text-left  sm:relative right-30">
           <h1 className="text-base sm:text-2xl font-bold">STEM Initiative For Rural Kids</h1>
           <p className="text-gray-800 text-sm sm:text-base">
             "Empowering young minds with STEM education to innovate and shape the future."

@@ -18,7 +18,7 @@ function Home1() {
 <div className="relative min-h-screen flex flex-col sm:flex-row">
       
       
-      <div className="flex-1 flex flex-col items-center  ">
+      <div className="flex-1 flex flex-col items-center w-full  ">
 
       {/* <Header/> */}
           <div className="bg-[#3066BE] min-h-24 w-full sm:min-w-[1275px] sm:h-20 flex items-center justify-between px-4 sm:px-8  relative">
@@ -97,8 +97,8 @@ function Home1() {
                         //   <Link className="w-full" to={item.path}>{item.name}</Link>
                         // </li>
                         <Link key={item.name} to={item.path} className="block p-2 text-black hover:bg-[#3066BE] rounded-md cursor-pointer hover:text-white">
-  {item.name}
-</Link>
+                         {item.name}
+                        </Link>
 
                       ))}
                     </ul>
